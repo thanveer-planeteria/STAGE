@@ -1,0 +1,477 @@
+//banner
+.main_banner {
+    padding-top: 190px;
+    position: relative;
+    background-color: $palegreen;
+    .iframe_wrap {
+        width: 100%;
+    }
+    .carousel {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .carousel-inner {
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 61.5%);
+                background: linear-gradient(178deg, rgba(30, 30, 30, 0.00) 25.58%, rgba(30, 30, 30, 0.65) 56.03%, rgba(30, 30, 30, 0.75) 97.94%);
+                z-index: 1;
+            }
+        }
+    }
+    .carousel-item {
+        >img {
+            width: 100%;
+            max-height: calc(100vh - 10px);
+            height: 650px;
+            object-fit: cover;
+        }
+    }
+    iframe,
+    video,
+    .wp-video {
+        width: 100% !important;
+        max-height: calc(100vh - 130px);
+        min-height: 600px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: relative;
+        z-index: 9;
+    }
+    .caption_wrap {
+        display: flex;
+        justify-content: center;
+    }
+    .carousel-caption {
+        position: absolute;
+        width: 1200px;
+        top: 10%;
+        z-index: 9;
+        margin: 0 auto;
+        display: table;
+        left: 0;
+        right: 0;
+        text-align: left;
+        >* {
+            max-width: 700px;
+        }
+        h2 {
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            font-size: 38px;
+        }
+        p {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 32px;
+            @include md {
+                display: none;
+            }
+        }
+        .btn_sm {
+            margin-top: 15px;
+            min-width: 260px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        @include md {}
+        @media (min-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 30px;
+        opacity: 1;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover,
+        &:focus {
+            background: #F5D109;
+            img {
+                filter: brightness(0) saturate(100%) invert(8%) sepia(46%) saturate(6885%) hue-rotate(197deg) brightness(91%) contrast(98%);
+            }
+        }
+    }
+    .carousel-control-next {
+        right: 30px;
+        img {
+            @include rotate;
+        }
+        @include md {
+            right: 10px;
+        }
+    }
+    .carousel-control-prev {
+        left: 30px;
+        @include md {
+            left: 10px;
+        }
+    }
+    .carousel-indicators li {
+        width: 15px;
+        height: 15px;
+        border: 0;
+        border-radius: 100px;
+        background: #fff;
+        opacity: 1;
+        &.active {
+            background: $primary;
+        }
+    }
+}
+
+.banner-caption {
+    max-width: 650px;
+    margin-bottom: 30px;
+    h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-variant: all-small-caps;
+    }
+    p {
+        font-size: 21px;
+        color: #fff;
+    }
+}
+
+.btn_main {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid $secondary;
+    padding: 8px 24px;
+    text-decoration: none;
+    img {
+        margin-left: 8px;
+    }
+    &:hover {
+        background: $secondary;
+        color: #fff;
+        border-color: $secondary;
+        text-decoration: none;
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main_banner {
+        .carousel-item {
+            >img {
+                height: 400px;
+                object-fit: cover;
+                z-index: 0;
+                min-height: 400px;
+                max-height: 400px;
+            }
+        }
+        iframe,
+        video {
+            height: 400px;
+            object-fit: cover;
+            z-index: 0;
+            min-height: 400px;
+            max-height: 400px;
+        }
+        .carousel-caption {
+            text-align: center;
+            h2 {
+                font-size: 32px;
+                span {
+                    font-size: 28px;
+                }
+            }
+            .btn_sm {
+                width: 100%;
+                max-width: 330px;
+            }
+        }
+    }
+}
+
+@media (max-width:1199.9px) {
+    .main_banner {
+        padding-top: 75px;
+        flex-direction: column;
+        .carousel-caption {
+            left: 50px;
+            right: 50px;
+            max-width: calc(100% - 100px);
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .main_banner .carousel-item>img {
+        min-height: 500px;
+    }
+}
+.banner_wraper{
+    max-width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 400px 1fr 450px;
+    background-color: $palegreen;
+    padding: 40px 0;
+}
+
+// plan trip form
+.plan_trip{
+    border-radius: 16px;
+    border: 1px solid  #D4D4D4;
+    background: #FFFFF7;
+    padding: 24px;
+    h2{
+        color: $primary;
+    }
+    .radiobuttons{
+        display: flex;
+        column-gap: 16px;
+    }
+    .date_time_wrap{
+        column-gap: 10px;
+    }
+    .btn_sm {
+        width: 100%;
+        min-height: 40px;
+    }
+    .form-group{
+        margin-bottom: 8px;
+    }
+    span.h5{
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+    .date_time{
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+    .time_select{
+        background-image: url(../img/time-sm.svg);
+        background-size: 20px;
+        background-position: top 10px right 8px;
+    }
+    .date_select{
+        background-image: url(../img/calendar-sm.svg);
+        background-size: 20px;
+        background-position: top 10px right 8px;
+    }
+    .rt_from_group{
+        position: relative;
+        margin-bottom: 4px;
+        &::after{
+            content: url(../img/route-circle.svg);
+            position: absolute;
+            right: 0px;
+            top: 68px;
+        }
+    }
+}
+
+// route list
+.route_list_wraper{
+    border-radius: 16px;
+    border: 1px solid $border-color;
+    background: $text-white;
+    padding: 24px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        li{
+            list-style: none;
+            a{
+                border-radius: 8px;
+                background:  #0A7A21;
+                color: #fff;
+                padding: 24px 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 100%;
+
+                &.violet{
+                    background:  #4F2695;
+                }
+                &.yellow{
+                    background:  #FFD96E;
+                    color: $text-black;
+                }
+                &.red{
+                    background:  #D70600;
+                }
+                &.lightblue{
+                    background:  #3CD2FF;
+                    color: $text-black;
+                }
+                &.pink{
+                    background:  #FFB5DE;
+                    color: $text-black;
+                }
+                &.blue{
+                    background:  #1421B2;
+                }
+            }
+        }
+    }
+}
+
+
+// service alerts
+.service-alerts {
+    max-width: 400px;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  background: $text-white;
+  font-family:$primary-font;
+  position: absolute;
+    width: 100%;
+    z-index: 55;
+    margin-top: 16px;
+
+
+.alerts-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count-badge {
+  background: #ffd500;
+  color: #000;
+  font-weight: 600;
+  font-family: $primary-font;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+}
+
+.title {
+  font-family: $primary-font;
+  font-size: 28px;
+  font-weight: 600;
+  color: $primary;
+}
+
+.chevron {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.alerts-body {
+    display: none;
+  padding: 10px;
+}
+
+.alert-item {
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  border: 2px solid #FFCE96;
+  background:  #FFF0D6;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  flex-direction: column;
+  p{
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; 
+    margin-bottom: 0px;
+  }
+}
+
+.alert-badge {
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+}
+.alert-title-wrap{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.alert-title{
+    color:  $text-black;
+    font-family: $primary-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 19.8px */
+    text-transform: capitalize;
+}
+
+/* Severity styles */
+ .alert-badge {
+  background: $primary;
+  color: #fff;
+  &.green{
+    background-color: #0A7A21;
+  }
+  &.yellow{
+    background-color: #FFD96E;
+    color: $text-black;
+  }
+  &.red{
+    background-color: #D70600;
+  }
+  &.lightblue{
+    background-color: #3CD2FF;
+    color: $text-black;
+  }
+  &.pink{
+    background-color: #FFB5DE;
+    color: $text-black;
+  }
+  &.blue{
+    background-color: #1421B2;
+  }
+
+}
+
+.alert-content strong {
+  font-size: 14px;
+  display: block;
+}
+
+.alert-content p {
+  font-size: 13px;
+  margin: 4px 0 0;
+  color: #333;
+}
+}

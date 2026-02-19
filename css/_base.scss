@@ -1,0 +1,542 @@
+//componenets (button, anchor tags, heading tags etc)
+body {
+    color: $text-black;
+    font-size: 16px;
+    @include secondary-font;
+    &.wp-admin {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    @include primary-font;
+}
+
+h1,
+.h1 {
+    font-size: 38px;
+    color: $black;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h2,
+.h2 {
+    font-size: 32px;
+    color: $primary;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h3,
+.h3 {
+    font-size: 28px;
+    color: $black;
+    font-weight: 600;
+}
+
+h4,
+.h4 {
+    font-size: 22px;
+    color: $black;
+    font-weight: 600;
+}
+
+h5,
+.h5 {
+    font-size: 18px;
+    color: $black;
+    font-weight: 600;
+    text-transform: none;
+}
+
+h6,
+.h6 {
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: block;
+}
+
+p {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-black;
+    @include secondary-font;
+}
+
+p.has-large-font-size {
+    font-size: 26px !important;
+    line-height: 36px;
+}
+
+p+ul,
+p+ol {
+    margin-top: -15px;
+}
+
+a {
+    color: $primary;
+    font-weight: 600;
+    &:hover {
+        color: #032B4E;
+        text-decoration: underline;
+        text-decoration-style: solid !important;
+    }
+}
+
+p a {
+    color: $text-black;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-style: solid !important;
+    text-decoration-thickness: 1px;
+
+    &:hover {
+        background-color: #FFECB4;
+    }
+}
+
+p a:hover {}
+
+b,
+strong {
+    font-weight: 700;
+}
+ul,
+ol{
+    font-weight: 500;
+    line-height: 24px;
+}
+
+//general rules
+.link {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 18px;
+        margin-left: 6px;
+    }
+    &:hover {
+        color: $primary;
+    }
+}
+
+.container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn_sm {
+    color: $white;
+    padding: 8px 16px;
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: none;
+    font-family: $primary-font;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    background: $primary;
+    border-radius: 36px;
+    line-height: 100%;
+    border: none;
+    &:hover {
+        background: $midgreen;
+        color: $primary !important;
+        text-decoration: none;
+        img {
+            @include img-green;
+        }
+    }
+    img {
+        margin-right: 8px;
+    }
+    &:focus {}
+}
+.btn_secondary{
+    border-radius: 36px;
+    border: 1px solid $primary;
+    background: #FBFDF0;
+    padding: 4px 16px;
+    color: #006627;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    min-height: 40px;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    &:hover{
+        background-color: #D6E9CC;
+        border-color: #D6E9CC;
+    }
+    &:focus{
+        border-radius: 36px;
+        background: $primary;
+        outline: 2px solid #C942FF;
+    }
+    
+}
+.btn_wraper{
+    display: flex;
+    column-gap: 24px;
+    &.align-end{
+        justify-content: flex-end;
+    }
+}
+.container {
+    max-width: 1230px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+}
+.main_wrapper{
+    label{
+        color: $text-black;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%; /* 16px */
+    }
+}
+.form-control {
+    min-height: 40px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $white;
+    font-family: $secondary-font;
+    color: $text-black !important;
+}
+
+.no-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.sm-gutters>.col,
+.sm-gutters>[class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+select {
+    min-height: 45px;
+    background-image: url(../img/select-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: top 8px right 12px;
+    min-width: 130px;
+    background-size: 24px;
+    color: $black;
+    border: 1px solid #D4DCE4;
+    border-radius: 5px;
+    background-color: $white;
+    &.form-control {
+        color: $black;
+        cursor: pointer;
+    }
+}
+
+.search-box {
+    .btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        z-index: 9;
+        transition: none;
+        &:hover {
+            img {}
+        }
+    }
+    .form-control {
+        color: $text-black !important;
+    }
+     ::-webkit-input-placeholder {
+        color: $text-black;
+        font-family: $secondary-font;
+    }
+     ::-moz-placeholder {
+        color: $text-black;
+    }
+     :-ms-input-placeholder {
+        color: $text-black;
+        font-family: $secondary-font;
+    }
+     :-moz-placeholder {
+        color: $text-black;
+        font-family: $secondary-font;
+    }
+}
+
+label.title {
+    font-weight: 600;
+    @include secondary-font;
+    margin-bottom: 4px;
+}
+
+.reset {
+    a,
+    #reset-filters {
+        font-size: 16px;
+        font-weight: 600;
+        color: $primary;
+        img {
+            margin-right: 3px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: $text-black !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    font-family: $secondary-font !important;
+}
+
+::-moz-placeholder {
+    color: $text-black !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    font-family: $secondary-font !important;
+}
+
+:-ms-input-placeholder {
+    color: $text-black !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    font-family: $secondary-font !important;
+}
+
+:-moz-placeholder {
+    color: $text-black !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    font-family: $secondary-font !important;
+}
+
+.main_wrapper {
+    .gfield_radio {
+        position: relative;
+        /* Hide native radio safely */
+        .gfield-choice-input {
+            position: absolute;
+            opacity: 0;
+        }
+        .gform-field-label {
+            position: relative;
+            padding-left: 24px;
+            font-size: 14px;
+            cursor: pointer;
+            /* Outer circle */
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border: 1px solid #808080;
+                border-radius: 50%;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -8px;
+                /* center without transform */
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+            /* Inner filled circle */
+            &::after {
+                content: "";
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #032B4E;
+                position: absolute;
+                left: 2px;
+                top: 50%;
+                margin-top: -5.5px;
+                /* center without transform */
+                opacity: 0;
+                transition: opacity 0.2s ease;
+            }
+            /* Hover shadow only on circle */
+            &:hover::before {
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        /* Checked state */
+        .gfield-choice-input:checked+.gform-field-label {
+            &::before {
+                border-color: #032B4E;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.main_wrapper {
+    .gfield_checkbox,
+    .ginput_container_consent {
+        position: relative;
+        /* Hide native input safely */
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+        input[type="checkbox"]+.gform-field-label {
+            position: relative;
+            padding-left: 26px;
+            font-size: 14px;
+            cursor: pointer;
+            /* Outer box */
+            &::before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border: 1px solid #808080;
+                border-radius: 4px;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -8px;
+                transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+            /* Tick */
+            &::after {
+                content: "";
+                width: 5px;
+                height: 9px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                margin-top: -6px;
+                opacity: 0;
+                transition: opacity 0.2s ease;
+                transform: rotate(37deg);
+            }
+            &:hover::before {
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        /* Checked state */
+        input[type="checkbox"]:checked+.gform-field-label {
+            &::before {
+                background: #043D6F;
+                border-color: #043D6F;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+.form-group{
+    label{
+        color: $text-black;
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 16px */
+    }
+}
+.generic_middle_block{
+    >h1,
+    >h2,
+    >h3,
+    >h4,
+    >h5,
+    >h6{
+        margin-bottom: 24px;
+        color: $primary;
+    }
+    .body_sm,
+    .body_rg,
+    .body_lg,
+    .body_xl{
+        color: $primary;
+    }
+    
+}
+.body_sm{
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+.body_rg{
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+.body_lg{
+    font-family: $secondary-font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+.body_xl{
+    font-family: $secondary-font;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 150%; /* 33px */
+}
