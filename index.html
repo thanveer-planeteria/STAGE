@@ -16,7 +16,10 @@
 </head>
 
 <body>
-    <header class="main_header" role="banner">
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#page_content" class="skip-link">Skip to main content</a>
+    
+    <header class="main_header">
         <div class="top_header">
             <div class="container">
                 <div class="top_header_cont">
@@ -30,10 +33,11 @@
                         </ul>
                     </div>
                     <div class="top_search">
-                        <img src="img/search.png" alt="">
+                        <img src="img/search.png" alt="search">
                     </div>
                     <div class="select_language">
-                        <select class="form_control">
+                        <label for="language_select" class="visually-hidden">Select Language</label>
+                        <select class="form_control" id="language_select">
                         <option>English</option>
                         <option>Spain</option>
                      </select>
@@ -45,9 +49,9 @@
             <div class="container">
                 <div class="head_wrap">
                     <div class="logo_wrap">
-                        <a class="navbar-brand" href="#">
-                            <img class="logo_desk" src="img/logo.svg" alt=" Logo">
-                            <img class="logo_mob" src="img/logo-mobile.svg" alt=" Logo">
+                        <a class="navbar-brand" href="#" aria-label="STAGE - Siskiyou Transit and General Express">
+                            <img class="logo_desk" src="img/logo.svg" alt="logo">
+                            <img class="logo_mob" src="img/logo-mobile.svg" alt="log0">
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -58,7 +62,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">Fares & Passes</a>
-                                    <ul class="dropdown-menu" aria-label="">
+                                    <ul class="dropdown-menu">
                                         <li><a href="#">lorem </a> </li>
                                         <li>
                                             <a href="#">lorem ipsum</a>
@@ -96,35 +100,35 @@
                 <div class="plan_trip_wraper">
                     <div class="plan_trip">
                         <h2>Plan a Trip</h2>
-                        <div class="search_wrap">
+                        <form class="search_wrap">
                         <div class="form-group rt_from_group">
-                            <label for="">From</label>
-                            <input type="text" class="form-control" id="" placeholder="address, stop, landmark">
+                            <label for="route_from">From</label>
+                            <input type="text" class="form-control" id="route_from" placeholder="address, stop, landmark" aria-required="true">
                             
                         </div>
                         <div class="form-group">
-                            <label for="">To</label>
-                            <input type="text" class="form-control" id="" placeholder="address, stop, landmark">
+                            <label for="route_to">To</label>
+                            <input type="text" class="form-control" id="route_to" placeholder="address, stop, landmark" aria-required="true">
                             
                         </div>
                         <span class="h5">When?</span>
                         <div class="form-group">
                             <div class="radiobuttons">
                                 <div class="rdio rdio-primary radio-inline">
-                                     <input name="radio" value="1" id="radio1" type="radio" checked="">
-                                    <label for="radio1">Depart at</label>
+                                     <input name="radio" value="1" id="depart" type="radio" checked="">
+                                    <label for="depart">Depart at</label>
                                 </div>
                                 <div class="rdio rdio-primary radio-inline">
-                                    <input name="radio" value="2" id="radio2" type="radio">
-                                    <label for="radio2">Arrive by</label>
+                                    <input name="radio" value="2" id="arrive" type="radio">
+                                    <label for="arrive">Arrive by</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group date_time">
                             <div class="date_time_wrap d-flex">
                                 <div class="dt_col">
-                                   <label for="">Date</label>
-                                    <select class="form-control date_select">
+                                   <label for="date_select">Date</label>
+                                    <select class="form-control date_select" id="date_select" aria-required="true">
                                 <option value="">MM/DD</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
@@ -132,8 +136,8 @@
                              
                                 </div>
                                 <div class="dt_col">
-                                   <label for="">Time</label>
-                                    <select class="form-control time_select">
+                                   <label for="time_select">Time</label>
+                                    <select class="form-control time_select" id="time_select" aria-required="true">
                                 <option value="">00/00</option>
                                 <option value="">1</option>
                                 <option value="">2</option>
@@ -142,21 +146,21 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn_sm ">Plan Trip</a>
-                    </div>
+                        <button type="submit" class="btn_sm">Plan Trip</button>
+                    </form>
                     </div>
                     <div class="service_alert_wraper">
                             <div class="service-alerts">
-  <button class="alerts-header" aria-expanded="false">
+  <button class="alerts-header" aria-expanded="false" aria-controls="alerts_content">
     <span class="header-left">
       <span class="count-badge">5</span>
-      <span><img src="img/warn-icon.svg" alt="warning"></span>
+      <span><img src="img/warn-icon.svg" alt="Alerts"></span>
       <span class="title">Service Alerts</span>
     </span>
     <span class="chevron"><img src="img/angle-down.svg" alt="arrow"></span>
   </button>
 
-  <div class="alerts-body">
+  <div class="alerts-body" id="alerts_content">
     <div class="alert-item severity-info">
       <div class="alert-title-wrap">
             <span class="alert-badge green">1</span>
@@ -252,7 +256,7 @@
                             <li class="ride-item">
                                 <a href="#">
                                     <div class="ride-icon">
-                                        <img src="img/map-icn.svg" alt="map">
+                                        <img src="img/map-icn.svg" alt="Routes & Schedules">
                                     </div>
                                     <div class="ride-text">
                                         <h3>Routes & Schedules</h3>
@@ -264,7 +268,7 @@
                             <li class="ride-item">
                                 <a href="#">
                                     <div class="ride-icon">
-                                        <img src="img/stop.svg" alt="stops">
+                                        <img src="img/stop.svg" alt="Riders Guides">
                                     </div>
                                     <div class="ride-text">
                                         <h3>Riders Guides</h3>
@@ -276,7 +280,7 @@
                             <li class="ride-item">
                                 <a href="#">
                                     <div class="ride-icon">
-                                        <img src="img/fares.svg" alt="fare">
+                                        <img src="img/fares.svg" alt="Fares & Passes">
                                     </div>
                                     <div class="ride-text">
                                         <h3>Fares & Passes</h3>
@@ -306,7 +310,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="ride-info-icon">
-                                            <img src="img/money-hand.svg" alt="discounted Fares">
+                                            <img src="img/money-hand.svg" alt="Discounted Fares">
                                         </div>
                                         <div class="ride-info-text">
                                             <h3>Discounted Fares</h3>
@@ -317,7 +321,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="ride-info-icon">
-                                            <img src="img/location-close.svg" alt="route deviations">
+                                            <img src="img/location-close.svg" alt="Route Deviations">
                                         </div>
                                         <div class="ride-info-text">
                                             <h3>Route Deviations</h3>
@@ -328,7 +332,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="ride-info-icon">
-                                            <img src="img/events.svg" alt="meetings and events">
+                                            <img src="img/events.svg" alt="events">
                                         </div>
                                         <div class="ride-info-text">
                                             <h3>Meetings & Events</h3>
@@ -346,7 +350,7 @@
                                     <h2>Latest News</h2>
                                     <p>Stories and news from STAGE</p>
                                 </div>
-                                <a href="#" class="btn_sm view-all">View All News</a>
+                                <a href="#" class="btn_sm view-all" role="button">View All News</a>
                             
                             </div>
                             
@@ -354,7 +358,7 @@
                         <a href="#">
                             <div class="news_content">
                                 <div class="newsimg ">
-                                    <img src="img/news-card.png " alt="news">
+                                    <img src="img/news-card.png" alt="News article featured image">
                                 </div>
                                 <div class="newsinfo">
                                     <div class="newsBody">
@@ -390,7 +394,7 @@
             <div class="footer-main">
                 <div class="footer-column footer-column-1">
                     <div class="logo-section">
-                        <a href="#"> <img src="img/logo.svg" alt="logo"> </a>
+                        <a href="#" aria-label="STAGE - Siskiyou Transit and General Express"> <img src="img/logo.svg" alt="logo"> </a>
                     </div>
                  
                 </div>
@@ -399,10 +403,10 @@
                     <div class="social_media">
                         <ul>
                             <li>
-                                <a href=""><img src="img/fb.svg" alt="facebook"> </a>
+                                <a href="" aria-label="Visit STAGE on Facebook"><img src="img/fb.svg" alt="facebook"> </a>
                             </li>
                             <li>
-                                <a href=""><img src="img/insta.svg" alt="Instagram"> </a>
+                                <a href="" aria-label="Visit STAGE on Instagram"><img src="img/insta.svg" alt="instagram"> </a>
                             </li>
                             
                         </ul>
@@ -417,7 +421,7 @@
                         <div class="ct_text">
                             <span class="label"><img src="img/phone-wt.svg" alt="phone">Phone:</span>
                             <p>
-                                <a href="#">+1 (555) 123-4567</a>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
                             </p>
                         </div>
                     </div>
@@ -429,9 +433,9 @@
                     <div class="contact-info-item">
                        
                         <div class="ct_text">
-                            <span class="label"><img src="img/email-wt.svg" alt="email">Email:</span>
+                            <span class="label"><img src="img/email-wt.svg" alt="Email">Email:</span>
                             <p>
-                                <a href="#">email@email.com</a>
+                                <a href="mailto:email@email.com">email@email.com</a>
                             </p>
                         </div>
                     </div>
@@ -440,7 +444,7 @@
                     <div class="contact-info-item">
                        
                         <div class="ct_text">
-                            <span class="label"> <img src="img/loc-wt.svg" alt="location-icon">Address:</span>
+                            <span class="label"> <img src="img/loc-wt.svg" alt="Address">Address:</span>
                             <p>
                                 <a href="#">123 Main Street<br> City, ST 12345<br> USA</a>
                             </p>

@@ -1792,7 +1792,7 @@ label.title {
   content: url(../img/route-circle.svg);
   position: absolute;
   right: 0px;
-  top: 68px;
+  top: 64px;
 }
 
 .route_list_wraper {
@@ -2157,9 +2157,6 @@ label.title {
   }
   .footer .footer-main .btn_sm {
     width: 100%;
-  }
-  .footer .footer-main .footer-column-3 {
-    order: 4;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3384,7 +3381,7 @@ p.date {
   position: relative;
   border-radius: 16px;
   border: 1px solid #E0E0E0;
-  background: #F8FAED;
+  background: #FFFFF7;
 }
 .news_content h3 {
   font-size: 22px;
@@ -3486,7 +3483,7 @@ p.date {
   font-weight: 600;
   color: #202020;
   font-family: "Work Sans", sans-serif;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .result_count {
@@ -3758,7 +3755,7 @@ p.date {
   padding-top: 0px;
 }
 .news_detail .news-dt-content {
-  padding: 40px 100px;
+  padding: 40px 0px;
 }
 .news_detail .news-dt-content h5 {
   padding-bottom: 10px;
@@ -5250,6 +5247,13 @@ p.date {
   background-image: url(../img/close-x.svg);
   background-repeat: no-repeat;
 }
+.clear_btn:hover {
+  color: #000000;
+  background-color: #FFECB4;
+}
+.clear_btn:hover::after {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(9%) saturate(5%) hue-rotate(337deg) brightness(101%) contrast(91%);
+}
 
 .table-wrap {
   overflow-x: auto;
@@ -6196,7 +6200,7 @@ p.date {
 .icon_cards:last-child {
   margin-bottom: 0px;
 }
-.icon_cards h3 {
+.icon_cards h2 {
   color: #006627;
   font-family: Poppins;
   font-size: 28px;
@@ -6470,6 +6474,24 @@ p.date {
     text-align: left;
   }
 }
+.radio-inline {
+  display: flex;
+  align-items: center;
+}
+
+.radio-inline {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.radio-inline input[type=radio] {
+  width: auto;
+}
+.radio-inline label {
+  margin-bottom: 0px;
+}
+
 .gray,
 .grey {
   background-color: #006627;
@@ -6864,13 +6886,14 @@ p.date {
 .img_button_row .img_btn_col a {
   border-radius: 16px;
   border: 1px solid #E0E0E0;
-  background: #FFFFF7;
+  background-color: #FFFFF7;
   display: flex;
   flex-direction: column;
 }
 .img_button_row .img_btn_col a:hover {
   text-decoration: none;
   border-color: #006627;
+  background-color: #F8FAED;
 }
 .img_button_row .img_block {
   position: relative;
@@ -6922,6 +6945,10 @@ p.date {
   flex-direction: column;
   justify-content: center;
 }
+.img_text_card_row .img_text_card_col.no-img .img_card_block {
+  background-color: #D6E9CC;
+  border-radius: 16px 16px 0px 0px;
+}
 .img_text_card_row .text-img-wrap {
   background: #fff;
   height: 100%;
@@ -6947,9 +6974,12 @@ p.date {
 }
 .img_text_card_row .text-img-wrap .img_card_block {
   position: relative;
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img_text_card_row .text-img-wrap .img_card_block img {
-  width: 100%;
   border-radius: 16px 16px 0px 0px;
 }
 .img_text_card_row .text-img-wrap .text_card_block {
@@ -7034,11 +7064,24 @@ h2 + .expand_img_grid {
   border: 1px solid #E0E0E0;
   background: #FFFFF7;
 }
+.expanding-grid .expand_box .expand_img {
+  aspect-ratio: 1/1;
+}
 .expanding-grid .expand_box:hover {
   border-color: #006627 !important;
 }
 .expanding-grid .expand_box:hover .plus-minus_icon {
   background: #F3F7FA;
+}
+.expanding-grid .expand_box.no-img .expand_img {
+  background-color: #D6E9CC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px 16px 0px 0px;
+}
+.expanding-grid .expand_box.no-img .expand_img img {
+  width: auto;
 }
 .expanding-grid .active .expand_box:hover {
   border: 1px solid #006627 !important;
@@ -10650,6 +10693,9 @@ legend.gform-field-label {
   flex-wrap: wrap;
   gap: 8px;
 }
+.routeMap_section .route_filter .acc__card {
+  margin-bottom: 0px;
+}
 .routeMap_section .route_filter .acc__title {
   padding: 8px 12px;
   min-height: 40px;
@@ -10672,6 +10718,9 @@ legend.gform-field-label {
   right: 4px;
   bottom: 0px;
   height: 40px;
+}
+.routeMap_section .route_filter .clear_btn {
+  margin-top: 16px;
 }
 .routeMap_section .text-Holder-sr {
   border-radius: 16px;
@@ -11121,6 +11170,10 @@ legend.gform-field-label {
   }
   .news_grid_info.listView .newsRow .newsColumn .newsimg img {
     border-radius: 16px 16px 0px 0px;
+  }
+  .showing_result_wraper {
+    flex-direction: column;
+    row-gap: 8px;
   }
 }
 @media (min-width: 1200px) {

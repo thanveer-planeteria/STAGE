@@ -1236,7 +1236,7 @@ p.date {
     position: relative;
     border-radius: 16px;
     border: 1px solid  #E0E0E0;
-    background: #F8FAED;
+    background: #FFFFF7;
     h3 {
         font-size: 22px;
         color: $primary !important;
@@ -1341,7 +1341,7 @@ p.date {
         font-weight: 600;
         color: $text-black;
         font-family: $secondary-font;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
     }
 }
 .result_count{
@@ -1612,7 +1612,7 @@ p.date {
         padding-top: 0px;
     }
     .news-dt-content {
-        padding: 40px 100px;
+        padding: 40px 0px;
         h5 {
             padding-bottom: 10px;
         }
@@ -3190,6 +3190,13 @@ p.date {
         background-image: url(../img/close-x.svg);
         background-repeat: no-repeat;
     }
+    &:hover{
+        color: $black;
+        background-color: #FFECB4;
+        &::after{
+            @include img-black;
+        }
+    }
 }
 .table-wrap {
     overflow-x: auto;
@@ -4190,7 +4197,7 @@ p.date {
     &:last-child{
         margin-bottom: 0px;
     }
-    h3{
+    h2{
         color: $primary;
         font-family: Poppins;
         font-size: 28px;
@@ -4489,5 +4496,20 @@ p.date {
                 text-align: left;
             }
         }
+    }
+}
+.radio-inline {
+    display: flex;
+    align-items: center;
+}
+.radio-inline {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    input[type="radio"] {
+        width: auto;
+    }
+    label{
+        margin-bottom: 0px;
     }
 }

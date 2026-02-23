@@ -137,6 +137,10 @@
     .news_grid_info.listView .newsRow .newsColumn .newsimg img{
         border-radius: 16px 16px 0px 0px;
     }
+    .showing_result_wraper{
+        flex-direction: column;
+        row-gap: 8px;
+    }
 }
 
 @media (min-width:1200px) {
@@ -146,7 +150,7 @@
     .expanding-container {
   
         &:nth-child(2),
-        &:nth-child(6),{
+        &:nth-child(6){
             border-radius: 0px 16px 16px 16px;
         }
         &:nth-child(5),

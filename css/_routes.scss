@@ -127,6 +127,9 @@
             flex-wrap: wrap;
             gap: 8px;
         }
+        .acc__card{
+            margin-bottom: 0px;
+        }
         .acc__title{
             padding: 8px 12px;
             min-height: 40px;
@@ -149,6 +152,9 @@
                 bottom: 0px;
                 height: 40px;
             }
+        }
+        .clear_btn{
+            margin-top: 16px;
         }
     }
     .text-Holder-sr {
